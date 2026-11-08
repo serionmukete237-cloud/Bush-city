@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties | Bush City Holdings — Land & Property Investment in Buea, Cameroon</title>
+    <meta name="description" content="Explore verified land investment opportunities in Buea, Cameroon. Browse residential and investment plots in Bokova Extension, Mile 16 Layout, and prime Buea Town.">
+    <meta name="keywords" content="Buea land for sale, buy plot in Buea, Bokova land Cameroon, Mile 16 real estate, property investment Buea, Cameroon real estate">
+    <meta name="author" content="Bush City Holdings">
+    <meta property="og:title" content="Available Properties | Bush City Holdings">
+    <meta property="og:description" content="Browse prime residential and strategic investment land opportunities in Buea, Cameroon.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'bush-dark': '#0A4D1E',
+                        'bush-green': '#16A34A',
+                        'bush-light': '#22C55E',
+                        'gold-accent': '#B8860B',
+                        'charcoal': '#1a1a1a',
+                        'off-white': '#FAF9F6',
+                    },
+                    fontFamily: {
+                        'heading': ['"Playfair Display"', 'serif'],
+                        'body': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-body text-charcoal bg-white antialiased" 
+      x-data="{ 
+          mobileMenu: false,
+          currentFilter: 'all',
+          selectedProperty: null,
+          properties: [
+              {
+                  id: 1,
+                  name: 'Bokova Extension Plot A',
+                  category: 'bokova',
+                  location: 'Bokova, Buea',
+                  size: '500 sqm',
+                  type: 'Residential Layout',
+                  price: 'Request Pricing',
+                  status: 'Sample Demonstration Listing',
+                  image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&auto=format&fit=crop&q=80',
+                  gallery: [
+                      'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&auto=format&fit=crop&q=80',
+                      'https://images.unsplash.com/photo-1628624747186-a941c476b7ef?w=800&auto=format&fit=crop&q=80',
+                      'https://images.unsplash.com/photo-1595880500386-4b33823b29cd?w=800&auto=format&fit=crop&q=80'
+                  ],
+                  shortDesc: 'A scenic, gently sloping plot located in the rapidly growing Bokova extension zone with motorable access and tranquil mountain views.',
+                  fullDesc: 'Situated in the expanding residential corridor of Bokova, this 500 sqm parcel offers an exceptional combination of peaceful suburban living and steady capital appreciation. The topography provides a natural elevation with magnificent vistas towards Mount Cameroon. Road grading and electrical network expansion in the vicinity make this plot highly suitable for modern villa construction.',
+                  highlights: [
+                      'Regular rectangular boundary layout (approx. 20m x 25m)',
+                      'Direct feeder road connection just 800m from main arterial route',
+                      'Stable soil structure ideal for solid residential foundation',
+                      'Rapidly growing neighborhood with active private developments'
+                  ],
+                  documentation: 'Preliminary survey records and area layout plan available for review upon physical inspection.'
+              },
+              {
+                  id: 2,
+                  name: 'Bokova Extension Plot B',
+                  category: 'bokova',
+                  location: 'Bokova, Buea',
+                  size: '400 sqm',
+                  type: 'Compact Residential Plot',
+                  price: 'Request Pricing',
+                  status: 'Sample Demonstration Listing',
+                  image: 'https://images.unsplash.com/photo-1628624747186-a941c476b7ef?w=800&auto=format&fit=crop&q=80',
+                  gallery: [
+                      'https://images.unsplash.com/photo-1628624747186-a941c476b7ef?w=800&auto=format&fit=crop&q=80',
+                      'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&auto=format&fit=crop&q=80'
+                  ],
+                  shortDesc: 'Affordable and well-proportioned plot ideal for a private bungalow or rental duplex project in a quiet, green enclave.',
+                  fullDesc: 'This 400 sqm parcel in Bokova is tailored for cost-effective residential development. Featuring clear demarcation pegs and a flat building envelope, it minimizes site preparation costs. Located close to academic and institutional facilities within the greater Buea zone.',
+                  highlights: [
+                      'Even topography requiring minimal excavation work',
+                      'Quiet residential pocket with clean mountain breezes',
+                      'Proximity to upcoming community infrastructure',
+                      'Flexible layout suitable for modern 3-4 bedroom homes'
+                  ],
+                  documentation: 'Site plan and inspection coordinates ready for on-site verification.'
+              },
+              {
+                  id: 3,
+                  name: 'Mile 16 Layout Plot',
+                  category: 'mile16',
+                  location: 'Mile 16, Buea',
+                  size: '450 sqm',
+                  type: 'High-Accessibility Plot',
+                  price: 'Request Pricing',
+                  status: 'Sample Demonstration Listing',
+                  image: 'https://images.unsplash.com/photo-1595880500386-4b33823b29cd?w=800&auto=format&fit=crop&q=80',
+                  gallery: [
+                      'https://images.unsplash.com/photo-1595880500386-4b33823b29cd?w=800&auto=format&fit=crop&q=80',
+                      'https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&auto=format&fit=crop&q=80'
+                  ],
+                  shortDesc: 'Prime plot in the bustling Mile 16 sector offering quick connectivity to both Buea central and the Douala-Buea transit highway.',
+                  fullDesc: 'Positioned in the strategic Mile 16 area, this plot offers superb logistical convenience for professionals and commuters. The area enjoys vibrant commercial activity nearby while maintaining a serene neighborhood feel inside the layout. Ideal for immediate residential living or high-demand rental apartments.',
+                  highlights: [
+                      'Excellent transit connectivity to the national highway',
+                      'Readily accessible electricity and municipal water connections',
+                      'High tenant demand for multi-family rental units in this corridor',
+                      'Paved access roads leading into the subdivision'
+                  ],
+                  documentation: 'Layout verification and boundary inspection available with Bush City Holdings.'
+              },
+              {
+                  id: 4,
+                  name: 'Buea Town Residential Estate',
+                  category: 'buea',
+                  location: 'Buea Town, Buea',
+                  size: '600 sqm',
+                  type: 'Prime Urban Residential',
+                  price: 'Request Pricing',
+                  status: 'Sample Demonstration Listing',
+                  image: 'https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&auto=format&fit=crop&q=80',
+                  gallery: [
+                      'https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&auto=format&fit=crop&q=80',
+                      'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&auto=format&fit=crop&q=80'
+                  ],
+                  shortDesc: 'Prestigious plot situated inside the classic Buea Town limits, surrounded by established utilities, schools, and offices.',
+                  fullDesc: 'A rare opportunity to secure a substantial 600 sqm plot within the historic and well-serviced core of Buea Town. Offering cool micro-climates, direct tarred road access, and proximity to major regional institutions, this property represents premier security and long-term prestige.',
+                  highlights: [
+                      'Located within the established municipal boundary of Buea Town',
+                      'Full utility coverage: immediate water, electricity, and telecommunications',
+                      'High security district with mature community leadership',
+                      'Ideal for luxury executive residence or commercial guest home'
+                  ],
+                  documentation: 'Full documentation review conducted during private scheduled consultation.'
+              },
+              {
+                  id: 5,
+                  name: 'Strategic Investment Plot Alpha',
+                  category: 'investment',
+                  location: 'Greater Buea Expansion Zone',
+                  size: '750 sqm',
+                  type: 'Growth Corridor Investment',
+                  price: 'Request Pricing',
+                  status: 'Sample Demonstration Listing',
+                  image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&auto=format&fit=crop&q=80',
+                  gallery: [
+                      'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&auto=format&fit=crop&q=80',
+                      'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&auto=format&fit=crop&q=80'
+                  ],
+                  shortDesc: 'Generously sized parcel in an accelerating development zone, positioned for substantial medium-to-long term appreciation.',
+                  fullDesc: 'Investors seeking land banking or medium-term capital gains will appreciate this 750 sqm parcel. As Greater Buea expands towards new administrative and educational hubs, plots in this corridor are witnessing accelerated infrastructure development and value appreciation.',
+                  highlights: [
+                      'Substantial plot dimensions suited for subdivision or mixed projects',
+                      'Anticipated road network expansions planned in the master layout',
+                      'Attractive entry valuation for proactive property investors',
+                      'Clear geographical demarcation with perimeter coordinate surveys'
+                  ],
+                  documentation: 'Survey beacons installed. Master development plan accessible upon inquiry.'
+              },
+              {
+                  id: 6,
+                  name: 'Strategic Investment Plot Beta',
+                  category: 'investment',
+                  location: 'Greater Buea Area',
+                  size: '1,000 sqm (1/4 Acre)',
+                  type: 'Commercial / Large Residential',
+                  price: 'Request Pricing',
+                  status: 'Sample Demonstration Listing',
+                  image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&auto=format&fit=crop&q=80',
+                  gallery: [
+                      'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&auto=format&fit=crop&q=80',
+                      'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&auto=format&fit=crop&q=80'
+                  ],
+                  shortDesc: 'Expansive 1,000 sqm parcel offering maximum flexibility for commercial developments, multi-unit housing, or private family compound.',
+                  fullDesc: 'This full quarter-acre (1,000 sqm) plot is an outstanding asset in Bueas peri-urban development belt. With broad road frontage and ample depth, it can accommodate multi-family student housing, a gated executive compound, or hospitality-oriented investments.',
+                  highlights: [
+                      'Wide frontage exceeding 30 meters along access route',
+                      'High-yield potential for multi-family apartment development',
+                      'Surrounded by natural greenery with unhindered panoramic views',
+                      'Subdivision permit feasibility upon formal acquisition'
+                  ],
+                  documentation: 'Preliminary perimeter documentation ready for legal review.'
+              }
+          ],
+          openModal(property) {
+              this.selectedProperty = property;
+              if (window.BushCity && window.BushCity.lockScroll) {
+                  window.BushCity.lockScroll();
+              }
+          },
+          closeModal() {
+              this.selectedProperty = null;
+              if (window.BushCity && window.BushCity.unlockScroll) {
+                  window.BushCity.unlockScroll();
+              }
+          }
+      }">
+
+    <!-- Accessibility Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="header-nav sticky top-0 z-40 bg-white shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="index.html" class="brand-lockup group" aria-label="Bush City Holdings home">
+                    <span class="brand-mark"><img src="images/logo.jpg" alt=""></span>
+                    <span class="brand-copy">
+                        <span class="brand-name">Bush City Holdings</span>
+                        <span class="brand-tagline">Guided by integrity, driven by results</span>
+                    </span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-bush-dark hover:text-black font-medium transition-colors">Home</a>
+                    <a href="About.html" class="nav-link text-bush-dark hover:text-black font-medium transition-colors">About Us</a>
+                    <a href="properties.html" class="nav-link active text-bush-dark font-bold border-b-2 border-bush-dark pb-1">Properties</a>
+                    <a href="index.html#why-choose-us" class="nav-link text-bush-dark hover:text-black font-medium transition-colors">Why Choose Us</a>
+                    <a href="contact.html" class="nav-link text-bush-dark hover:text-black font-medium transition-colors">Contact</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden lg:block">
+                    <a href="#properties-catalog" class="btn-primary inline-flex items-center px-6 py-2.5 rounded-lg text-sm font-semibold shadow-sm hover:shadow-md">
+                        Find Your Property
+                        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button @click="mobileMenu = !mobileMenu" class="lg:hidden p-2 rounded-lg text-bush-dark hover:text-black hover:bg-gray-100 focus:outline-none" aria-label="Toggle mobile menu">
+                    <svg x-show="!mobileMenu" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    <svg x-show="mobileMenu" x-cloak class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div x-show="mobileMenu" x-cloak x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="lg:hidden bg-white border-t border-gray-100 shadow-xl">
+            <div class="px-5 py-5 space-y-2">
+                <a href="index.html" class="block px-4 py-3 rounded-lg text-bush-dark hover:bg-gray-50 font-medium transition-colors">Home</a>
+                <a href="About.html" class="block px-4 py-3 rounded-lg text-bush-dark hover:bg-gray-50 font-medium transition-colors">About Us</a>
+                <a href="properties.html" class="block px-4 py-3 rounded-lg bg-bush-dark/10 text-bush-dark font-bold">Properties</a>
+                <a href="index.html#why-choose-us" class="block px-4 py-3 rounded-lg text-bush-dark hover:bg-gray-50 font-medium transition-colors">Why Choose Us</a>
+                <a href="contact.html" class="block px-4 py-3 rounded-lg text-bush-dark hover:bg-gray-50 font-medium transition-colors">Contact</a>
+                <div class="pt-3">
+                    <a href="contact.html" class="btn-primary w-full text-center py-3 rounded-lg block">Schedule Site Inspection</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- ===================== PAGE HERO BANNER ===================== -->
+        <section class="bg-bush-dark text-white py-20 lg:py-24 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-15">
+                <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1920&auto=format&fit=crop&q=80" alt="Buea Land Landscape" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-bush-dark/85"></div>
+            </div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                <!-- Breadcrumb -->
+                <nav class="flex justify-center items-center space-x-2 text-sm text-white/70 mb-4" aria-label="Breadcrumb">
+                    <a href="index.html" class="hover:text-white transition-colors">Home</a>
+                    <span>/</span>
+                    <span class="text-white font-medium">Available Properties</span>
+                </nav>
+                <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-4">Our Available Properties</h1>
+                <p class="text-lg sm:text-xl text-white/85 max-w-2xl mx-auto font-light leading-relaxed">
+                    Explore curated land and property opportunities across Bokova, Mile 16, and Buea Town. All listings represent demonstrated development areas.
+                </p>
+                <div class="mt-6 inline-flex items-center px-4 py-1.5 rounded-full bg-gold-accent/20 border border-gold-accent text-gold-accent text-xs font-semibold uppercase tracking-wider">
+                    Demonstration Listings &bull; Exact Boundaries Verified On-Site
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== FILTER BAR ===================== -->
+        <section id="properties-catalog" class="py-8 bg-off-white border-b border-gray-200 sticky top-20 z-30 shadow-xs">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-wrap items-center justify-between gap-4">
+                    <div class="flex items-center space-x-2">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-gray-500">Filter By Location:</span>
+                    </div>
+                    
+                    <div class="flex flex-wrap items-center gap-2">
+                        <button @click="currentFilter = 'all'" 
+                                :class="currentFilter === 'all' ? 'bg-bush-dark text-white' : 'bg-white text-gray-700 hover:bg-gray-100'"
+                                class="px-4 py-2 rounded-lg text-sm font-semibold transition border border-gray-200 shadow-2xs">
+                            All Plots (6)
+                        </button>
+                        <button @click="currentFilter = 'bokova'" 
+                                :class="currentFilter === 'bokova' ? 'bg-bush-dark text-white' : 'bg-white text-gray-700 hover:bg-gray-100'"
+                                class="px-4 py-2 rounded-lg text-sm font-semibold transition border border-gray-200 shadow-2xs">
+                            Bokova Extension
+                        </button>
+                        <button @click="currentFilter = 'mile16'" 
+                                :class="currentFilter === 'mile16' ? 'bg-bush-dark text-white' : 'bg-white text-gray-700 hover:bg-gray-100'"
+                                class="px-4 py-2 rounded-lg text-sm font-semibold transition border border-gray-200 shadow-2xs">
+                            Mile 16 Layout
+                        </button>
+                        <button @click="currentFilter = 'buea'" 
+                                :class="currentFilter === 'buea' ? 'bg-bush-dark text-white' : 'bg-white text-gray-700 hover:bg-gray-100'"
+                                class="px-4 py-2 rounded-lg text-sm font-semibold transition border border-gray-200 shadow-2xs">
+                            Buea Town
+                        </button>
+                        <button @click="currentFilter = 'investment'" 
+                                :class="currentFilter === 'investment' ? 'bg-bush-dark text-white' : 'bg-white text-gray-700 hover:bg-gray-100'"
+                                class="px-4 py-2 rounded-lg text-sm font-semibold transition border border-gray-200 shadow-2xs">
+                            Strategic Investment
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== PROPERTY SHOWCASE GRID ===================== -->
+        <section class="py-16 bg-off-white min-h-[600px]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <template x-for="property in properties" :key="property.id">
+                        <div x-show="currentFilter === 'all' || currentFilter === property.category"
+                             x-transition:enter="transition ease-out duration-300"
+                             x-transition:enter-start="opacity-0 scale-95"
+                             x-transition:enter-end="opacity-100 scale-100"
+                             class="property-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border-l-4 border-bush-green flex flex-col justify-between">
+                            
+                            <!-- Card Image Container -->
+                            <div>
+                                <div class="property-image relative h-56 bg-gray-100 overflow-hidden">
+                                    <img :src="property.image" :alt="property.name" loading="lazy" class="w-full h-full object-cover">
+                                    <!-- Badge -->
+                                    <span class="sample-badge absolute top-3 right-3 text-white text-2xs font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
+                                        Sample Listing
+                                    </span>
+                                    <div class="absolute bottom-3 left-3 bg-black/65 backdrop-blur-xs text-white text-xs px-3 py-1 rounded-md font-medium">
+                                        <span x-text="property.type"></span>
+                                    </div>
+                                </div>
+
+                                <!-- Card Content -->
+                                <div class="p-6">
+                                    <div class="flex items-center justify-between text-xs text-gray-500 mb-2">
+                                        <span class="flex items-center text-bush-dark font-medium">
+                                            <svg class="w-3.5 h-3.5 mr-1 text-bush-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+                                            <span x-text="property.location"></span>
+                                        </span>
+                                        <span class="font-bold text-gray-700 bg-gray-100 px-2.5 py-0.5 rounded-full" x-text="property.size"></span>
+                                    </div>
+
+                                    <h3 class="font-heading font-bold text-xl text-bush-dark mb-2 hover:text-black transition cursor-pointer"
+                                        @click="openModal(property)"
+                                        x-text="property.name"></h3>
+                                    
+                                    <p class="text-gray-600 text-sm line-clamp-3 mb-4 leading-relaxed" x-text="property.shortDesc"></p>
+
+                                    <div class="pt-3 border-t border-gray-100 flex items-center justify-between">
+                                        <div>
+                                            <span class="text-2xs uppercase tracking-wider text-gray-400 block font-semibold">Pricing Status</span>
+                                            <span class="font-bold text-bush-dark text-base" x-text="property.price"></span>
+                                        </div>
+                                        <div class="text-2xs text-gray-400 italic">Verified Inquiries Only</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card Actions -->
+                            <div class="p-6 pt-0 space-y-2">
+                                <button @click="openModal(property)" 
+                                        class="btn-primary w-full py-2.5 text-sm font-semibold rounded-lg flex items-center justify-center">
+                                    <span>View Property Details</span>
+                                    <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                                </button>
+                                
+                                <a :href="'https://wa.me/237676873893?text=' + encodeURIComponent('Hello Bush City Holdings, I would like to schedule a site inspection for ' + property.name + ' in ' + property.location + '.')"
+                                   target="_blank" 
+                                   rel="noopener noreferrer"
+                                   class="btn-secondary w-full py-2 text-sm font-semibold rounded-lg flex items-center justify-center">
+                                    <svg class="w-4 h-4 mr-1.5 text-bush-green" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z"/>
+                                    </svg>
+                                    Book Inspection
+                                </a>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== PROPERTY DETAIL MODAL ===================== -->
+        <div x-show="selectedProperty !== null" 
+             x-cloak 
+             @keydown.escape.window="closeModal()"
+             class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto"
+             style="background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(4px);">
+            
+            <div @click.away="closeModal()"
+                 x-show="selectedProperty !== null"
+                 x-transition:enter="transition ease-out duration-300"
+                 x-transition:enter-start="opacity-0 translate-y-4 scale-95"
+                 x-transition:enter-end="opacity-100 translate-y-0 scale-100"
+                 x-transition:leave="transition ease-in duration-200"
+                 x-transition:leave-start="opacity-100 translate-y-0 scale-100"
+                 x-transition:leave-end="opacity-0 translate-y-4 scale-95"
+                 class="bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative border border-gray-100">
+                
+                <!-- Close Button -->
+                <button @click="closeModal()" 
+                        class="absolute top-4 right-4 z-20 w-10 h-10 bg-white/90 rounded-full flex items-center justify-center text-gray-700 hover:text-black hover:bg-white shadow-md focus:outline-none transition">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+
+                <template x-if="selectedProperty">
+                    <div>
+                        <!-- Modal Image -->
+                        <div class="relative h-72 sm:h-80 bg-gray-900">
+                            <img :src="selectedProperty.image" :alt="selectedProperty.name" class="w-full h-full object-cover opacity-90">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                            
+                            <div class="absolute bottom-6 left-6 right-6 text-white">
+                                <span class="bg-gold-accent text-white text-2xs font-bold uppercase px-3 py-1 rounded-full mb-2 inline-block">
+                                    Sample Demonstration Listing
+                                </span>
+                                <h2 class="font-heading text-2xl sm:text-3xl font-bold" x-text="selectedProperty.name"></h2>
+                                <p class="text-sm text-white/80 flex items-center mt-1">
+                                    <svg class="w-4 h-4 mr-1 text-bush-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+                                    <span x-text="selectedProperty.location"></span>
+                                    <span class="mx-2">&bull;</span>
+                                    <span x-text="selectedProperty.size"></span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Modal Body -->
+                        <div class="p-6 sm:p-8 space-y-6">
+                            <!-- Key Metrics Grid -->
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 p-4 bg-off-white rounded-xl border border-gray-100">
+                                <div>
+                                    <span class="text-2xs uppercase text-gray-500 font-semibold block">Plot Size</span>
+                                    <span class="font-bold text-bush-dark text-base" x-text="selectedProperty.size"></span>
+                                </div>
+                                <div>
+                                    <span class="text-2xs uppercase text-gray-500 font-semibold block">Category</span>
+                                    <span class="font-bold text-bush-dark text-base" x-text="selectedProperty.type"></span>
+                                </div>
+                                <div>
+                                    <span class="text-2xs uppercase text-gray-500 font-semibold block">Pricing</span>
+                                    <span class="font-bold text-bush-dark text-base" x-text="selectedProperty.price"></span>
+                                </div>
+                                <div>
+                                    <span class="text-2xs uppercase text-gray-500 font-semibold block">Inspection</span>
+                                    <span class="font-bold text-bush-green text-base">Available Daily</span>
+                                </div>
+                            </div>
+
+                            <!-- Full Description -->
+                            <div>
+                                <h4 class="font-heading font-bold text-lg text-bush-dark mb-2">Property Overview</h4>
+                                <p class="text-gray-600 text-sm leading-relaxed" x-text="selectedProperty.fullDesc"></p>
+                            </div>
+
+                            <!-- Highlights -->
+                            <div>
+                                <h4 class="font-heading font-bold text-lg text-bush-dark mb-3">Key Features &amp; Location Highlights</h4>
+                                <ul class="space-y-2">
+                                    <template x-for="(hl, i) in selectedProperty.highlights" :key="i">
+                                        <li class="flex items-start text-sm text-gray-700">
+                                            <svg class="w-5 h-5 text-bush-green mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                            <span x-text="hl"></span>
+                                        </li>
+                                    </template>
+                                </ul>
+                            </div>
+
+                            <!-- Documentation Note -->
+                            <div class="p-4 rounded-xl bg-green-50/60 border border-bush-green/30 text-sm">
+                                <h5 class="font-bold text-bush-dark flex items-center mb-1">
+                                    <svg class="w-4 h-4 mr-1.5 text-bush-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                                    Documentation &amp; Verification Notice
+                                </h5>
+                                <p class="text-gray-600 text-xs leading-relaxed" x-text="selectedProperty.documentation"></p>
+                                <p class="text-gray-500 text-2xs mt-2 italic">Note: Bush City Holdings provides clear verification guidance for each plot. No unverifiable legal claims are made without client-accompanied site review.</p>
+                            </div>
+
+                            <!-- Dual CTAs -->
+                            <div class="pt-4 border-t border-gray-100 flex flex-col sm:flex-row gap-3">
+                                <a :href="'https://wa.me/237676873893?text=' + encodeURIComponent('Hello Bush City Holdings, I am interested in ' + selectedProperty.name + ' (' + selectedProperty.location + ') and would like to schedule a site inspection.')"
+                                   target="_blank" 
+                                   rel="noopener noreferrer"
+                                   class="btn-primary flex-1 py-3.5 rounded-xl font-bold text-sm text-center flex items-center justify-center shadow-md">
+                                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z"/>
+                                    </svg>
+                                    Book Site Inspection via WhatsApp
+                                </a>
+                                
+                                <a :href="'https://wa.me/237676873893?text=' + encodeURIComponent('Hello Bush City Holdings, please provide verified pricing and terms for ' + selectedProperty.name + '.')"
+                                   target="_blank" 
+                                   rel="noopener noreferrer"
+                                   class="btn-secondary sm:w-48 py-3 rounded-xl font-bold text-sm text-center flex items-center justify-center">
+                                    Request Pricing
+                                </a>
+                            </div>
+
+                            <div class="text-center pt-2">
+                                <button @click="closeModal()" class="text-gray-400 hover:text-gray-700 text-xs font-medium">
+                                    &larr; Back to Properties Catalog
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+
+        <!-- ===================== CUSTOM INQUIRY / CTA ===================== -->
+        <section class="bg-bush-dark text-white py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold mb-4">Have Specific Plot Requirements?</h2>
+                <p class="text-white/80 max-w-2xl mx-auto mb-8 text-base leading-relaxed">
+                    If your intended build requires specific acreage, commercial road frontage, or tailored agricultural topography in Fako Division, contact our acquisition team directly.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="https://wa.me/237676873893?text=Hello%20Bush%20City%20Holdings%2C%20I%20have%20custom%20property%20requirements%20in%20Buea." 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="btn-whatsapp px-8 py-3.5 rounded-lg font-bold flex items-center justify-center text-base shadow-lg">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z"/>
+                        </svg>
+                        Chat Directly (+237 676 873 893)
+                    </a>
+                    <a href="contact.html" class="inline-flex items-center justify-center px-8 py-3.5 rounded-lg border-2 border-white text-white font-semibold hover:bg-white hover:text-bush-dark transition duration-200">
+                        Schedule a General Inspection Tour
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="bg-bush-dark text-white pt-16 pb-8 border-t border-bush-green/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <!-- Column 1: Brand Info -->
+                <div class="space-y-4">
+                    <a href="index.html" class="brand-lockup brand-lockup-footer" aria-label="Bush City Holdings home">
+                        <span class="brand-mark"><img src="images/logo.jpg" alt=""></span>
+                        <span class="brand-copy">
+                            <span class="brand-name">Bush City Holdings</span>
+                            <span class="brand-tagline">Guided by integrity, driven by results</span>
+                        </span>
+                    </a>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        A real estate and property investment company based in Buea, Cameroon. Dedicated to securing your future through transparent land acquisitions.
+                    </p>
+                    <div class="flex items-center space-x-3 pt-2">
+                        <a href="#" class="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center hover:bg-bush-green transition" aria-label="Facebook">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="#" class="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center hover:bg-bush-green transition" aria-label="Instagram">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </a>
+                        <a href="https://wa.me/237676873893" class="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center hover:bg-bush-green transition" aria-label="WhatsApp">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-4 text-white">Quick Links</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition">Home</a></li>
+                        <li><a href="About.html" class="text-gray-300 hover:text-white transition">About Us</a></li>
+                        <li><a href="properties.html" class="text-bush-light font-medium transition">Properties Catalog</a></li>
+                        <li><a href="index.html#why-choose-us" class="text-gray-300 hover:text-white transition">Why Choose Us</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white transition">Contact & Booking</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Featured Locations -->
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-4 text-white">Locations</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="properties.html" class="text-gray-300 hover:text-white transition">Bokova Extension</a></li>
+                        <li><a href="properties.html" class="text-gray-300 hover:text-white transition">Mile 16 Layout</a></li>
+                        <li><a href="properties.html" class="text-gray-300 hover:text-white transition">Buea Town Residential</a></li>
+                        <li><a href="properties.html" class="text-gray-300 hover:text-white transition">Strategic Investment Plots</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact Details -->
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-4 text-white">Contact Us</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start space-x-3">
+                            <svg class="w-5 h-5 text-bush-light mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            <span class="text-gray-300">Buea, Southwest Region, Cameroon</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <svg class="w-5 h-5 text-bush-light mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z"/></svg>
+                            <a href="https://wa.me/237676873893" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition">+237 676 873 893</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
+                <p>&copy; <span id="year-span"></span> Bush City Holdings. All rights reserved.</p>
+                <p class="text-gray-400">Buea, Cameroon &bull; Land &amp; Property Investment</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Action Button -->
+    <a href="https://wa.me/?text=Hello%20Bush%20City%20Holdings%2C%20I%20would%20like%20to%20inquire%20about%20your%20available%20properties." 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="whatsapp-float shadow-xl"
+       aria-label="Chat with Bush City Holdings on WhatsApp">
+        <svg fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z"/>
+            <path d="M12 2C6.477 2 2 6.477 2 12c0 1.891.528 3.659 1.445 5.174L2 22l4.981-1.399C8.423 21.493 10.154 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.062c-1.636 0-3.15-.49-4.42-1.332l-.317-.21-2.955.83.844-2.883-.23-.332A8.026 8.026 0 014 12.062c0-4.432 3.587-8.038 8-8.038 4.414 0 8 3.606 8 8.038s-3.586 8.038-8 8.038z"/>
+        </svg>
+    </a>
+
+    <!-- Year Dynamic Update -->
+    <script>
+        document.getElementById('year-span').textContent = new Date().getFullYear();
+    </script>
+
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Custom Main JS -->
+    <script src="main.js"></script>
+</body>
+</html>

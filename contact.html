@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Bush City Holdings — Schedule a Property Visit in Buea, Cameroon</title>
+    <meta name="description" content="Get in touch with Bush City Holdings. Schedule a site visit, inquire about available land in Buea, Bokova, and Mile 16, or chat with our team on WhatsApp.">
+    <meta name="keywords" content="Bush City Holdings contact, schedule site visit Buea, buy land Buea, WhatsApp property Cameroon, real estate inspection">
+    <meta name="author" content="Bush City Holdings">
+    <meta property="og:title" content="Contact Bush City Holdings | Property & Land Investment Buea">
+    <meta property="og:description" content="Reach our team directly on WhatsApp or book a guided site inspection for properties in Buea, Cameroon.">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'bush-dark': '#0A4D1E',
+                        'bush-green': '#16A34A',
+                        'bush-light': '#22C55E',
+                        'gold-accent': '#B8860B',
+                        'charcoal': '#1a1a1a',
+                        'off-white': '#FAF9F6',
+                    },
+                    fontFamily: {
+                        'heading': ['"Playfair Display"', 'serif'],
+                        'body': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-body text-charcoal bg-white antialiased" x-data="{ mobileMenu: false }">
+
+    <!-- Accessibility Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="header-nav sticky top-0 z-50 bg-white shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="index.html" class="brand-lockup group" aria-label="Bush City Holdings home">
+                    <span class="brand-mark"><img src="images/logo.jpg" alt=""></span>
+                    <span class="brand-copy">
+                        <span class="brand-name">Bush City Holdings</span>
+                        <span class="brand-tagline">Guided by integrity, driven by results</span>
+                    </span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-bush-dark hover:text-black font-medium transition-colors">Home</a>
+                    <a href="About.html" class="nav-link text-bush-dark hover:text-black font-medium transition-colors">About Us</a>
+                    <a href="properties.html" class="nav-link text-bush-dark hover:text-black font-medium transition-colors">Properties</a>
+                    <a href="index.html#why-choose-us" class="nav-link text-bush-dark hover:text-black font-medium transition-colors">Why Choose Us</a>
+                    <a href="contact.html" class="nav-link active text-bush-dark font-bold border-b-2 border-bush-dark pb-1">Contact</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden lg:block">
+                    <a href="properties.html" class="btn-primary inline-flex items-center px-6 py-2.5 rounded-lg text-sm font-semibold shadow-sm hover:shadow-md">
+                        Find Your Property
+                        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button @click="mobileMenu = !mobileMenu" class="lg:hidden p-2 rounded-lg text-bush-dark hover:text-black hover:bg-gray-100 focus:outline-none" aria-label="Toggle mobile menu">
+                    <svg x-show="!mobileMenu" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    <svg x-show="mobileMenu" x-cloak class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div x-show="mobileMenu" x-cloak x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="lg:hidden bg-white border-t border-gray-100 shadow-xl">
+            <div class="px-5 py-5 space-y-2">
+                <a href="index.html" class="block px-4 py-3 rounded-lg text-bush-dark hover:bg-gray-50 font-medium transition-colors">Home</a>
+                <a href="About.html" class="block px-4 py-3 rounded-lg text-bush-dark hover:bg-gray-50 font-medium transition-colors">About Us</a>
+                <a href="properties.html" class="block px-4 py-3 rounded-lg text-bush-dark hover:bg-gray-50 font-medium transition-colors">Properties</a>
+                <a href="index.html#why-choose-us" class="block px-4 py-3 rounded-lg text-bush-dark hover:bg-gray-50 font-medium transition-colors">Why Choose Us</a>
+                <a href="contact.html" class="block px-4 py-3 rounded-lg bg-bush-dark/10 text-bush-dark font-bold">Contact</a>
+                <div class="pt-3">
+                    <a href="properties.html" class="btn-primary w-full text-center py-3 rounded-lg block">Find Your Property</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- ===================== PAGE HERO BANNER ===================== -->
+        <section class="bg-bush-dark text-white py-20 lg:py-24 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10">
+                <div class="absolute -top-24 -left-24 w-96 h-96 border border-white rounded-full"></div>
+                <div class="absolute -bottom-24 -right-24 w-[30rem] h-[30rem] border border-white rounded-full"></div>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                <!-- Breadcrumbs -->
+                <nav class="flex justify-center items-center space-x-2 text-sm text-white/70 mb-4" aria-label="Breadcrumb">
+                    <a href="index.html" class="hover:text-white transition-colors">Home</a>
+                    <span>/</span>
+                    <span class="text-white font-medium">Contact</span>
+                </nav>
+                <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-4">Get In Touch</h1>
+                <p class="text-lg sm:text-xl text-white/85 max-w-2xl mx-auto font-light leading-relaxed">
+                    Have questions about acquiring property in Buea? Speak with our team directly or book an on-site visit to inspect your preferred land layout.
+                </p>
+            </div>
+        </section>
+
+        <!-- ===================== CONTACT INFORMATION CARDS ===================== -->
+        <section class="py-16 bg-off-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- WhatsApp Card -->
+                    <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition duration-300 border-l-4 border-bush-green flex flex-col justify-between">
+                        <div>
+                            <div class="w-14 h-14 bg-green-50 rounded-xl flex items-center justify-center text-bush-green mb-6">
+                                <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z"/>
+                                    <path d="M12 2C6.477 2 2 6.477 2 12c0 1.891.528 3.659 1.445 5.174L2 22l4.981-1.399C8.423 21.493 10.154 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.062c-1.636 0-3.15-.49-4.42-1.332l-.317-.21-2.955.83.844-2.883-.23-.332A8.026 8.026 0 014 12.062c0-4.432 3.587-8.038 8-8.038 4.414 0 8 3.606 8 8.038s-3.586 8.038-8 8.038z"/>
+                                </svg>
+                            </div>
+                            <h3 class="font-heading font-bold text-xl text-bush-dark mb-2">Direct WhatsApp</h3>
+                            <p class="text-gray-600 text-sm mb-4">Fastest response for inquiries, pricing requests, and instant site visit schedules.</p>
+                            <p class="font-bold text-lg text-bush-dark tracking-wide mb-6">+237 676 873 893</p>
+                        </div>
+                        <a href="https://wa.me/237676873893" target="_blank" rel="noopener noreferrer" class="btn-whatsapp inline-flex items-center justify-center w-full py-3 px-4 rounded-lg font-semibold text-sm transition shadow-sm">
+                            Chat on WhatsApp
+                            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </a>
+                    </div>
+
+                    <!-- Location Card -->
+                    <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition duration-300 border-l-4 border-bush-green flex flex-col justify-between">
+                        <div>
+                            <div class="w-14 h-14 bg-green-50 rounded-xl flex items-center justify-center text-bush-dark mb-6">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            </div>
+                            <h3 class="font-heading font-bold text-xl text-bush-dark mb-2">Office Location</h3>
+                            <p class="text-gray-600 text-sm mb-4">Operating in the scenic heart of Mount Cameroon's historic city.</p>
+                            <p class="font-semibold text-gray-800 text-base mb-1">Buea, Southwest Region</p>
+                            <p class="text-gray-500 text-sm mb-6">Cameroon, Central Africa</p>
+                        </div>
+                        <a href="#location-map" class="btn-secondary inline-flex items-center justify-center w-full py-2.5 px-4 rounded-lg font-semibold text-sm transition">
+                            View on Map
+                            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </a>
+                    </div>
+
+                    <!-- Business Hours Card -->
+                    <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition duration-300 border-l-4 border-bush-green flex flex-col justify-between">
+                        <div>
+                            <div class="w-14 h-14 bg-green-50 rounded-xl flex items-center justify-center text-bush-dark mb-6">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            </div>
+                            <h3 class="font-heading font-bold text-xl text-bush-dark mb-2">Operating Hours</h3>
+                            <p class="text-gray-600 text-sm mb-4">Available for consultation calls, WhatsApp chats, and field inspections.</p>
+                            <div class="space-y-1 mb-6 text-sm">
+                                <div class="flex justify-between py-1 border-b border-gray-100">
+                                    <span class="font-medium text-gray-700">Monday – Friday:</span>
+                                    <span class="text-gray-900 font-semibold">8:00 AM – 6:00 PM</span>
+                                </div>
+                                <div class="flex justify-between py-1 border-b border-gray-100">
+                                    <span class="font-medium text-gray-700">Saturday:</span>
+                                    <span class="text-gray-900 font-semibold">9:00 AM – 4:00 PM</span>
+                                </div>
+                                <div class="flex justify-between py-1">
+                                    <span class="font-medium text-gray-700">Sunday:</span>
+                                    <span class="text-gray-500 italic">By Appointment</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#booking-section" class="btn-primary inline-flex items-center justify-center w-full py-2.5 px-4 rounded-lg font-semibold text-sm transition">
+                            Book Inspection
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== SITE VISIT BOOKING / MAIN LEAD FORM ===================== -->
+        <section id="booking-section" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-bush-green font-semibold tracking-wider uppercase text-xs sm:text-sm">In-Person Verification</span>
+                    <h2 class="font-heading text-3xl sm:text-4xl font-bold text-bush-dark mt-2 mb-4 section-heading">
+                        Your Next Property Could Be One Visit Away
+                    </h2>
+                    <p class="text-gray-600 text-base sm:text-lg">
+                        We encourage every investor and home builder to walk the ground. Submit the form below to initiate your inspection booking via WhatsApp directly with our team.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                    <!-- Form Column (Left - 7 cols) -->
+                    <div class="lg:col-span-7 bg-off-white p-8 sm:p-10 rounded-2xl shadow-sm border border-gray-100">
+                        <form id="booking-form" novalidate class="space-y-6">
+                            <!-- Full Name -->
+                            <div>
+                                <label for="fullName" class="form-label">Full Name <span class="text-red-500">*</span></label>
+                                <input type="text" id="fullName" name="fullName" placeholder="e.g. Samuel Eto'o" class="form-input" required>
+                                <p id="fullName-error" class="form-error-message"></p>
+                            </div>
+
+                            <!-- Phone Number -->
+                            <div>
+                                <label for="phoneNumber" class="form-label">WhatsApp / Phone Number <span class="text-red-500">*</span></label>
+                                <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="e.g. +237 676 873 893" class="form-input" required>
+                                <p id="phoneNumber-error" class="form-error-message"></p>
+                            </div>
+
+                            <!-- Email Address (Optional) -->
+                            <div>
+                                <label for="email" class="form-label">Email Address <span class="text-gray-400 font-normal">(Optional)</span></label>
+                                <input type="email" id="email" name="email" placeholder="your.name@example.com" class="form-input">
+                                <p id="email-error" class="form-error-message"></p>
+                            </div>
+
+                            <!-- Preferred Property / Location -->
+                            <div>
+                                <label for="preferredProperty" class="form-label">Preferred Property or Location <span class="text-red-500">*</span></label>
+                                <select id="preferredProperty" name="preferredProperty" class="form-input bg-white cursor-pointer" required>
+                                    <option value="" disabled selected>-- Choose a property or area --</option>
+                                    <option value="Bokova Extension">Bokova Extension (Residential)</option>
+                                    <option value="Mile 16 Layout">Mile 16 Layout (Strategic Access)</option>
+                                    <option value="Buea Town Residential">Buea Town Residential (Prime City)</option>
+                                    <option value="Strategic Investment Plots">Strategic Investment Plots (Greater Buea)</option>
+                                    <option value="Multiple Locations">Multiple Locations / Open Discussion</option>
+                                </select>
+                                <p id="preferredProperty-error" class="form-error-message"></p>
+                            </div>
+
+                            <!-- Preferred Inspection Date -->
+                            <div>
+                                <label for="inspectionDate" class="form-label">Preferred Inspection Date <span class="text-red-500">*</span></label>
+                                <input type="date" id="inspectionDate" name="inspectionDate" class="form-input" required>
+                                <p id="inspectionDate-error" class="form-error-message"></p>
+                            </div>
+
+                            <!-- Additional Message -->
+                            <div>
+                                <label for="additionalMessage" class="form-label">Additional Message / Inquiries <span class="text-gray-400 font-normal">(Optional)</span></label>
+                                <textarea id="additionalMessage" name="additionalMessage" rows="3" placeholder="Tell us if you have specific plot size needs or transport requirements..." class="form-input"></textarea>
+                                <p id="additionalMessage-error" class="form-error-message"></p>
+                            </div>
+
+                            <!-- Submit CTA Button -->
+                            <div class="pt-2">
+                                <button type="submit" class="btn-primary w-full py-4 text-base font-bold shadow-md hover:shadow-lg flex items-center justify-center rounded-xl transition duration-200">
+                                    <svg class="w-5 h-5 mr-2 text-bush-light" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z"/>
+                                    </svg>
+                                    Schedule Site Visit via WhatsApp
+                                </button>
+                                <p class="text-xs text-center text-gray-500 mt-3">
+                                    Submitting will format your request and launch WhatsApp to chat directly with Bush City Holdings (+237 676 873 893).
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Guidance & Steps (Right - 5 cols) -->
+                    <div class="lg:col-span-5 space-y-8">
+                        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <h3 class="font-heading font-bold text-2xl text-bush-dark mb-6">What to Expect</h3>
+                            
+                            <div class="space-y-6">
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-9 h-9 rounded-full bg-bush-dark text-white font-bold text-sm flex items-center justify-center flex-shrink-0">
+                                        1
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900 text-base">Submit Your Request</h4>
+                                        <p class="text-sm text-gray-600 mt-1">Select your preferred date and property so we can prepare plot layout maps in advance.</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-9 h-9 rounded-full bg-bush-dark text-white font-bold text-sm flex items-center justify-center flex-shrink-0">
+                                        2
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900 text-base">WhatsApp Confirmation</h4>
+                                        <p class="text-sm text-gray-600 mt-1">Our representative immediately confirms meeting points, driving directions, and timing.</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-9 h-9 rounded-full bg-bush-dark text-white font-bold text-sm flex items-center justify-center flex-shrink-0">
+                                        3
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900 text-base">Guided Ground Walk</h4>
+                                        <p class="text-sm text-gray-600 mt-1">We walk boundaries with you, review topography, road access, and utility proximity.</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-9 h-9 rounded-full bg-bush-dark text-white font-bold text-sm flex items-center justify-center flex-shrink-0">
+                                        4
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900 text-base">Documentation Review</h4>
+                                        <p class="text-sm text-gray-600 mt-1">No pressure, no hidden clauses. Clear step-by-step guidance on legal acquisition stages.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Trust Card -->
+                        <div class="bg-bush-dark text-white p-8 rounded-2xl relative overflow-hidden">
+                            <div class="relative z-10">
+                                <h4 class="font-heading font-bold text-xl mb-3">Integrity-First Real Estate</h4>
+                                <p class="text-white/80 text-sm leading-relaxed mb-6">
+                                    Whether you reside locally in Cameroon or are an overseas investor in the diaspora, we ensure every detail is open, verified, and accessible.
+                                </p>
+                                <a href="https://wa.me/237676873893?text=Hello%20Bush%20City%20Holdings%2C%20I%20have%20an%20inquiry%20regarding%20property%20investments%20in%20Buea." target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-semibold text-bush-light hover:text-white transition">
+                                    Instant WhatsApp Query &rarr;
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== GENERAL INQUIRY SECTION ===================== -->
+        <section class="py-16 bg-off-white border-t border-gray-100">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-10">
+                    <h2 class="font-heading text-2xl sm:text-3xl font-bold text-bush-dark mb-2">Have a General Question?</h2>
+                    <p class="text-gray-600 text-sm sm:text-base">For general partnerships, consulting, or general land enquiries, send us a quick note.</p>
+                </div>
+
+                <div class="bg-white p-8 sm:p-10 rounded-2xl shadow-sm border border-gray-100">
+                    <form id="general-inquiry-form" novalidate class="space-y-5">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <div>
+                                <label for="generalName" class="form-label">Your Name <span class="text-red-500">*</span></label>
+                                <input type="text" id="generalName" name="generalName" placeholder="Full name" class="form-input" required>
+                                <p id="generalName-error" class="form-error-message"></p>
+                            </div>
+                            <div>
+                                <label for="generalEmail" class="form-label">Email Address <span class="text-red-500">*</span></label>
+                                <input type="email" id="generalEmail" name="generalEmail" placeholder="email@address.com" class="form-input" required>
+                                <p id="generalEmail-error" class="form-error-message"></p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="generalSubject" class="form-label">Subject <span class="text-red-500">*</span></label>
+                            <input type="text" id="generalSubject" name="generalSubject" placeholder="e.g. Plot Survey Inquiries or Diaspora Acquisition" class="form-input" required>
+                            <p id="generalSubject-error" class="form-error-message"></p>
+                        </div>
+
+                        <div>
+                            <label for="generalMessage" class="form-label">Message <span class="text-red-500">*</span></label>
+                            <textarea id="generalMessage" name="generalMessage" rows="4" placeholder="How can Bush City Holdings assist you?" class="form-input" required></textarea>
+                            <p id="generalMessage-error" class="form-error-message"></p>
+                        </div>
+
+                        <div class="pt-2 text-right">
+                            <button type="submit" class="btn-primary px-8 py-3 rounded-lg text-sm font-semibold shadow hover:shadow-md transition">
+                                Send Message via WhatsApp
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== MAP / LOCATION SECTION ===================== -->
+        <section id="location-map" class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-10">
+                    <h2 class="font-heading text-3xl font-bold text-bush-dark mb-3">Find Us in Buea</h2>
+                    <p class="text-gray-600 text-sm sm:text-base">Conveniently situated in the Southwest Region of Cameroon, with active property developments spanning Buea Town, Bokova, and Mile 16.</p>
+                </div>
+
+                <div class="map-container overflow-hidden rounded-2xl border border-gray-200 shadow-sm">
+                    <iframe 
+                        title="Bush City Holdings Location in Buea"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63547.24845881684!2d9.2!3d4.15!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1061131a9b8c0a0f%3A0xb60e4fe3e2075a1a!2sBuea%2C%20Cameroon!5e0!3m2!1sen!2scm!4v1" 
+                        width="100%" 
+                        height="420" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== FAQ MINI SECTION ===================== -->
+        <section class="py-16 bg-off-white" x-data="{ openFaq: null }">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="font-heading text-2xl sm:text-3xl font-bold text-bush-dark mb-2">Frequently Asked Inspection Questions</h2>
+                    <p class="text-gray-600 text-sm">Quick clarity before booking your site visit.</p>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- FAQ 1 -->
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                        <button @click="openFaq = (openFaq === 1 ? null : 1)" class="w-full px-6 py-4 text-left font-semibold text-bush-dark flex justify-between items-center focus:outline-none">
+                            <span>How quickly will I receive confirmation after booking?</span>
+                            <svg class="w-5 h-5 transition-transform duration-200 text-bush-green" :class="{ 'rotate-180': openFaq === 1 }" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div x-show="openFaq === 1" x-cloak class="px-6 pb-5 pt-1 text-gray-600 text-sm leading-relaxed border-t border-gray-100">
+                            Because requests trigger a direct WhatsApp connection, our representatives typically respond within a few hours to establish a convenient meeting point in Buea.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                        <button @click="openFaq = (openFaq === 2 ? null : 2)" class="w-full px-6 py-4 text-left font-semibold text-bush-dark flex justify-between items-center focus:outline-none">
+                            <span>Can I inspect multiple properties on the same date?</span>
+                            <svg class="w-5 h-5 transition-transform duration-200 text-bush-green" :class="{ 'rotate-180': openFaq === 2 }" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div x-show="openFaq === 2" x-cloak class="px-6 pb-5 pt-1 text-gray-600 text-sm leading-relaxed border-t border-gray-100">
+                            Yes. In the form or on WhatsApp, simply specify that you wish to inspect multiple locations (e.g., Bokova Extension and Mile 16 Layout). We can coordinate a unified tour itinerary.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                        <button @click="openFaq = (openFaq === 3 ? null : 3)" class="w-full px-6 py-4 text-left font-semibold text-bush-dark flex justify-between items-center focus:outline-none">
+                            <span>Can family members or a representative attend the visit on my behalf?</span>
+                            <svg class="w-5 h-5 transition-transform duration-200 text-bush-green" :class="{ 'rotate-180': openFaq === 3 }" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div x-show="openFaq === 3" x-cloak class="px-6 pb-5 pt-1 text-gray-600 text-sm leading-relaxed border-t border-gray-100">
+                            Absolutely. Many diaspora buyers authorize a trusted local representative, engineer, or family member to accompany us for video calls and hands-on site review.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== FINAL CTA SECTION ===================== -->
+        <section class="bg-bush-dark text-white py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold mb-4">Prefer Immediate Assistance?</h2>
+                <p class="text-white/80 max-w-xl mx-auto mb-8 text-base">
+                    Skip the form and chat with our real estate specialists directly on WhatsApp right now.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="https://wa.me/237676873893" target="_blank" rel="noopener noreferrer" class="btn-whatsapp px-8 py-3.5 rounded-lg font-bold flex items-center justify-center text-base shadow-lg">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z"/>
+                        </svg>
+                        Chat Directly (+237 676 873 893)
+                    </a>
+                    <a href="properties.html" class="inline-flex items-center justify-center px-8 py-3.5 rounded-lg border-2 border-white text-white font-semibold hover:bg-white hover:text-bush-dark transition duration-200">
+                        View Available Properties
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="bg-bush-dark text-white pt-16 pb-8 border-t border-bush-green/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <!-- Column 1: Brand Info -->
+                <div class="space-y-4">
+                    <a href="index.html" class="brand-lockup brand-lockup-footer" aria-label="Bush City Holdings home">
+                        <span class="brand-mark"><img src="images/logo.jpg" alt=""></span>
+                        <span class="brand-copy">
+                            <span class="brand-name">Bush City Holdings</span>
+                            <span class="brand-tagline">Guided by integrity, driven by results</span>
+                        </span>
+                    </a>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        A real estate and property investment company based in Buea, Cameroon. Dedicated to securing your future through transparent land acquisitions.
+                    </p>
+                    <div class="flex items-center space-x-3 pt-2">
+                        <a href="#" class="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center hover:bg-bush-green transition" aria-label="Facebook">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="#" class="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center hover:bg-bush-green transition" aria-label="Instagram">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </a>
+                        <a href="https://wa.me/237676873893" class="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center hover:bg-bush-green transition" aria-label="WhatsApp">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-4 text-white">Quick Links</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition">Home</a></li>
+                        <li><a href="About.html" class="text-gray-300 hover:text-white transition">About Us</a></li>
+                        <li><a href="properties.html" class="text-gray-300 hover:text-white transition">Properties</a></li>
+                        <li><a href="index.html#why-choose-us" class="text-gray-300 hover:text-white transition">Why Choose Us</a></li>
+                        <li><a href="contact.html" class="text-bush-light font-medium transition">Contact & Booking</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Featured Locations -->
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-4 text-white">Locations</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="properties.html" class="text-gray-300 hover:text-white transition">Bokova Extension</a></li>
+                        <li><a href="properties.html" class="text-gray-300 hover:text-white transition">Mile 16 Layout</a></li>
+                        <li><a href="properties.html" class="text-gray-300 hover:text-white transition">Buea Town Residential</a></li>
+                        <li><a href="properties.html" class="text-gray-300 hover:text-white transition">Strategic Investment Plots</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact Details -->
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-4 text-white">Contact Us</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start space-x-3">
+                            <svg class="w-5 h-5 text-bush-light mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            <span class="text-gray-300">Buea, Southwest Region, Cameroon</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <svg class="w-5 h-5 text-bush-light mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z"/></svg>
+                            <a href="https://wa.me/237676873893" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition">+237 676 873 893</a>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <svg class="w-5 h-5 text-bush-light mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            <span class="text-gray-300">Mon - Sat: 8:00 AM - 6:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
+                <p>&copy; <span id="year-span"></span> Bush City Holdings. All rights reserved.</p>
+                <p class="text-gray-400">Buea, Cameroon &bull; Land &amp; Property Investment</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Action Button -->
+    <a href="https://wa.me/237676873893?text=Hello%20Bush%20City%20Holdings%2C%20I%20would%20like%20to%20inquire%20about%20your%20available%20properties." 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="whatsapp-float shadow-xl"
+       aria-label="Chat with Bush City Holdings on WhatsApp">
+        <svg fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z"/>
+            <path d="M12 2C6.477 2 2 6.477 2 12c0 1.891.528 3.659 1.445 5.174L2 22l4.981-1.399C8.423 21.493 10.154 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.062c-1.636 0-3.15-.49-4.42-1.332l-.317-.21-2.955.83.844-2.883-.23-.332A8.026 8.026 0 014 12.062c0-4.432 3.587-8.038 8-8.038 4.414 0 8 3.606 8 8.038s-3.586 8.038-8 8.038z"/>
+        </svg>
+    </a>
+
+    <!-- Year Dynamic Update -->
+    <script>
+        document.getElementById('year-span').textContent = new Date().getFullYear();
+    </script>
+
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Custom Main JS (contains booking form validation & WhatsApp trigger) -->
+    <script src="main.js"></script>
+</body>
+</html>

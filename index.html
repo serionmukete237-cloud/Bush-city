@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bush City Holdings | Premium Land & Property Investment in Buea, Cameroon</title>
+    <meta name="description" content="Discover valuable land and property investment opportunities in Buea, Cameroon. Explore available properties in Bokova, Mile 16, and Buea Town. Book site inspections with confidence.">
+    <meta name="keywords" content="Bush City Holdings, Buea real estate, land for sale Buea, property investment Cameroon, Bokova plots, Mile 16 layout, Cameroon property">
+    <meta name="author" content="Bush City Holdings">
+    <meta property="og:title" content="Bush City Holdings | Real Estate & Land Investment in Buea">
+    <meta property="og:description" content="Secure your future. Invest in prime Cameroon land opportunities with verified boundaries and clear guidance.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- GSAP enhances the hero reveal; the page remains usable if the CDN is unavailable. -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'bush-dark': '#0A4D1E',
+                        'bush-green': '#16A34A',
+                        'bush-light': '#22C55E',
+                        'gold-accent': '#B8860B',
+                        'charcoal': '#1a1a1a',
+                        'off-white': '#FAF9F6',
+                    },
+                    fontFamily: {
+                        'heading': ['"Playfair Display"', 'serif'],
+                        'body': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-body text-charcoal bg-white antialiased" x-data="{ mobileMenu: false, activeFaq: null }">
+
+    <!-- Accessibility Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- ===================== A. HEADER / NAVIGATION ===================== -->
+    <header class="header-nav sticky top-0 z-50 bg-white shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="index.html" class="brand-lockup group" aria-label="Bush City Holdings home">
+                    <span class="brand-mark"><img src="images/logo.jpg" alt=""></span>
+                    <span class="brand-copy">
+                        <span class="brand-name">Bush City Holdings</span>
+                        <span class="brand-tagline">Guided by integrity, driven by results</span>
+                    </span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link active text-bush-dark font-bold border-b-2 border-bush-dark pb-1">Home</a>
+                    <a href="About.html" class="nav-link text-bush-dark hover:text-black font-medium transition-colors">About Us</a>
+                    <a href="properties.html" class="nav-link text-bush-dark hover:text-black font-medium transition-colors">Properties</a>
+                    <a href="#why-choose-us" class="nav-link text-bush-dark hover:text-black font-medium transition-colors">Why Choose Us</a>
+                    <a href="contact.html" class="nav-link text-bush-dark hover:text-black font-medium transition-colors">Contact</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden lg:block">
+                    <a href="properties.html" class="btn-primary inline-flex items-center px-6 py-2.5 rounded-lg text-sm font-semibold shadow-sm hover:shadow-md">
+                        Find Your Property
+                        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button @click="mobileMenu = !mobileMenu" class="lg:hidden p-2 rounded-lg text-bush-dark hover:text-black hover:bg-gray-100 focus:outline-none" aria-label="Toggle mobile menu">
+                    <svg x-show="!mobileMenu" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    <svg x-show="mobileMenu" x-cloak class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div x-show="mobileMenu" x-cloak x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="lg:hidden bg-white border-t border-gray-100 shadow-xl">
+            <div class="px-5 py-5 space-y-2">
+                <a href="index.html" class="block px-4 py-3 rounded-lg bg-bush-dark/10 text-bush-dark font-bold">Home</a>
+                <a href="About.html" class="block px-4 py-3 rounded-lg text-bush-dark hover:bg-gray-50 font-medium transition-colors">About Us</a>
+                <a href="properties.html" class="block px-4 py-3 rounded-lg text-bush-dark hover:bg-gray-50 font-medium transition-colors">Properties</a>
+                <a href="#why-choose-us" @click="mobileMenu = false" class="block px-4 py-3 rounded-lg text-bush-dark hover:bg-gray-50 font-medium transition-colors">Why Choose Us</a>
+                <a href="contact.html" class="block px-4 py-3 rounded-lg text-bush-dark hover:bg-gray-50 font-medium transition-colors">Contact</a>
+                <div class="pt-3">
+                    <a href="properties.html" class="btn-primary w-full text-center py-3 rounded-lg block">Find Your Property</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- ===================== B. HERO SECTION ===================== -->
+        <section class="hero-section" aria-labelledby="hero-title">
+            <div class="hero-backdrop" aria-hidden="true">
+                <img class="hero-backdrop-image" src="images/hero1.jpg" alt="" fetchpriority="high">
+                <div class="hero-backdrop-shade"></div>
+            </div>
+
+            <div class="hero-layout">
+                <div class="hero-copy">
+                    <p class="hero-kicker">
+                        <span class="hero-kicker-dot"></span>
+                        Premium Land &amp; Property Investments
+                        <span class="hero-kicker-place">Buea, Cameroon</span>
+                    </p>
+
+                    <h1 class="hero-title font-heading" id="hero-title" aria-label="Secure Your Future" aria-live="off">
+                        <span class="hero-title-line"><span data-typewriter-line="0">Secure </span></span>
+                        <span class="hero-title-line hero-title-accent"><span data-typewriter-line="1">Your Future</span></span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Discover valuable land investment opportunities in Buea and beyond. Explore available properties, understand their locations, and take the next step towards owning your land.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="properties.html" class="btn-primary hero-button hero-button-primary">
+                            Explore Available Properties
+                            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                        <a href="contact.html#booking-section" class="hero-button hero-button-secondary">
+                            Book a Site Visit
+                        </a>
+                    </div>
+
+                    <ul class="hero-trust" aria-label="Our commitments">
+                        <li>
+                            <svg aria-hidden="true" viewBox="0 0 20 20" fill="none"><path d="m4 10 4 4 8-8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Strategic Buea locations
+                        </li>
+                        <li>
+                            <svg aria-hidden="true" viewBox="0 0 20 20" fill="none"><path d="m4 10 4 4 8-8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Guided site inspections
+                        </li>
+                        <li>
+                            <svg aria-hidden="true" viewBox="0 0 20 20" fill="none"><path d="m4 10 4 4 8-8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Transparent documentation
+                        </li>
+                    </ul>
+                </div>
+
+                <aside class="hero-media" aria-label="A look at land opportunities in Buea">
+                    <div class="hero-media-card" data-hero-media>
+                        <div class="hero-media-frame">
+                            <img class="hero-media-poster is-visible" src="media/hero/boxing.webp" alt="Land for sale in the Boxing, Molyko area of Buea">
+                            <img class="hero-media-poster hero-media-poster-next" src="media/hero/boxing.webp" alt="" aria-hidden="true">
+                            <video class="hero-media-video is-visible" muted playsinline autoplay loop preload="none" poster="media/hero/boxing.webp" aria-hidden="true"></video>
+                            <video class="hero-media-video" muted playsinline autoplay loop preload="none" aria-hidden="true"></video>
+                            <div class="hero-media-shade"></div>
+                            <span class="hero-media-index"><span class="hero-media-index-dot"></span> Buea, Southwest Region</span>
+                        </div>
+                        <div class="hero-media-caption">
+                            <div>
+                                <p class="hero-media-title" data-hero-media-title>Room to grow, right here in Buea.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="hero-media-note">
+                        <span class="hero-media-note-mark" aria-hidden="true">B</span>
+                        <span>Guided by integrity,<br><strong>driven by results.</strong></span>
+                    </div>-->
+                </aside>
+            </div>
+        </section>
+
+        <!-- ===================== C. FEATURED PROPERTIES ===================== -->
+        <section class="py-24 bg-white" id="featured-properties">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-bush-green font-semibold tracking-wider uppercase text-xs sm:text-sm">Carefully Selected Portfolios</span>
+                    <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-bush-dark mt-2 mb-4 section-heading">
+                        Featured Land Opportunities
+                    </h2>
+                    <p class="text-gray-600 text-base sm:text-lg">
+                        Explore our selection of available land opportunities in prime locations across Buea. Clear physical demarcation and guided site inspections for each plot.
+                    </p>
+                </div>
+
+                <!-- 4-Card CSS Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Property 1: Bokova Extension -->
+                    <div class="property-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border-l-4 border-bush-green flex flex-col justify-between">
+                        <div>
+                            <div class="property-image relative h-52 bg-gray-100 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&auto=format&fit=crop&q=80" alt="Bokova Extension Plot" loading="lazy" class="w-full h-full object-cover">
+                                <span class="sample-badge absolute top-3 right-3 text-white text-2xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm">
+                                    Sample Listing
+                                </span>
+                                <div class="absolute bottom-2.5 left-2.5 bg-black/60 backdrop-blur-xs text-white text-2xs px-2.5 py-0.5 rounded font-medium">
+                                    Residential Zone
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-center justify-between text-xs text-gray-500 mb-2">
+                                    <span class="flex items-center text-bush-dark font-medium">
+                                        <svg class="w-3.5 h-3.5 mr-1 text-bush-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+                                        Bokova, Buea
+                                    </span>
+                                    <span class="font-bold text-gray-700 bg-gray-100 px-2 py-0.5 rounded">500 sqm</span>
+                                </div>
+                                <h3 class="font-heading font-bold text-lg text-bush-dark mb-2">Bokova Extension</h3>
+                                <p class="text-gray-600 text-xs sm:text-sm line-clamp-3 mb-4 leading-relaxed">
+                                    A spacious plot in the growing Bokova extension area, ideal for residential development with easy motorable access and scenic views.
+                                </p>
+                                <div class="pt-3 border-t border-gray-100 flex items-center justify-between text-xs">
+                                    <span class="text-gray-400 font-semibold uppercase text-2xs">Pricing</span>
+                                    <span class="font-bold text-bush-dark text-sm">Request Pricing</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0 space-y-2">
+                            <a href="properties.html" class="btn-primary w-full py-2.5 text-xs sm:text-sm font-semibold rounded-lg flex items-center justify-center">
+                                View Details
+                            </a>
+                            <a href="https://wa.me/237676873893?text=Hello%20Bush%20City%20Holdings%2C%20I%20am%20interested%20in%20inspecting%20Bokova%20Extension." target="_blank" rel="noopener noreferrer" class="btn-secondary w-full py-2 text-xs sm:text-sm font-semibold rounded-lg flex items-center justify-center">
+                                Book Inspection
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Property 2: Mile 16 Layout -->
+                    <div class="property-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border-l-4 border-bush-green flex flex-col justify-between">
+                        <div>
+                            <div class="property-image relative h-52 bg-gray-100 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1628624747186-a941c476b7ef?w=600&auto=format&fit=crop&q=80" alt="Mile 16 Layout Plot" loading="lazy" class="w-full h-full object-cover">
+                                <span class="sample-badge absolute top-3 right-3 text-white text-2xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm">
+                                    Sample Listing
+                                </span>
+                                <div class="absolute bottom-2.5 left-2.5 bg-black/60 backdrop-blur-xs text-white text-2xs px-2.5 py-0.5 rounded font-medium">
+                                    Transit Hub
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-center justify-between text-xs text-gray-500 mb-2">
+                                    <span class="flex items-center text-bush-dark font-medium">
+                                        <svg class="w-3.5 h-3.5 mr-1 text-bush-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+                                        Mile 16, Buea
+                                    </span>
+                                    <span class="font-bold text-gray-700 bg-gray-100 px-2 py-0.5 rounded">450 sqm</span>
+                                </div>
+                                <h3 class="font-heading font-bold text-lg text-bush-dark mb-2">Mile 16 Layout</h3>
+                                <p class="text-gray-600 text-xs sm:text-sm line-clamp-3 mb-4 leading-relaxed">
+                                    Well-positioned land in the Mile 16 area with high connectivity to major highways, local markets, and public transit nodes.
+                                </p>
+                                <div class="pt-3 border-t border-gray-100 flex items-center justify-between text-xs">
+                                    <span class="text-gray-400 font-semibold uppercase text-2xs">Pricing</span>
+                                    <span class="font-bold text-bush-dark text-sm">Request Pricing</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0 space-y-2">
+                            <a href="properties.html" class="btn-primary w-full py-2.5 text-xs sm:text-sm font-semibold rounded-lg flex items-center justify-center">
+                                View Details
+                            </a>
+                            <a href="https://wa.me/237676873893?text=Hello%20Bush%20City%20Holdings%2C%20I%20am%20interested%20in%20inspecting%20Mile%2016%20Layout." target="_blank" rel="noopener noreferrer" class="btn-secondary w-full py-2 text-xs sm:text-sm font-semibold rounded-lg flex items-center justify-center">
+                                Book Inspection
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Property 3: Buea Residential Land -->
+                    <div class="property-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border-l-4 border-bush-green flex flex-col justify-between">
+                        <div>
+                            <div class="property-image relative h-52 bg-gray-100 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1595880500386-4b33823b29cd?w=600&auto=format&fit=crop&q=80" alt="Buea Town Land" loading="lazy" class="w-full h-full object-cover">
+                                <span class="sample-badge absolute top-3 right-3 text-white text-2xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm">
+                                    Sample Listing
+                                </span>
+                                <div class="absolute bottom-2.5 left-2.5 bg-black/60 backdrop-blur-xs text-white text-2xs px-2.5 py-0.5 rounded font-medium">
+                                    Urban Core
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-center justify-between text-xs text-gray-500 mb-2">
+                                    <span class="flex items-center text-bush-dark font-medium">
+                                        <svg class="w-3.5 h-3.5 mr-1 text-bush-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+                                        Buea Town
+                                    </span>
+                                    <span class="font-bold text-gray-700 bg-gray-100 px-2 py-0.5 rounded">600 sqm</span>
+                                </div>
+                                <h3 class="font-heading font-bold text-lg text-bush-dark mb-2">Buea Residential</h3>
+                                <p class="text-gray-600 text-xs sm:text-sm line-clamp-3 mb-4 leading-relaxed">
+                                    Prime residential plot located inside classic Buea town boundaries, suitable for executive family residences or rental apartments.
+                                </p>
+                                <div class="pt-3 border-t border-gray-100 flex items-center justify-between text-xs">
+                                    <span class="text-gray-400 font-semibold uppercase text-2xs">Pricing</span>
+                                    <span class="font-bold text-bush-dark text-sm">Request Pricing</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0 space-y-2">
+                            <a href="properties.html" class="btn-primary w-full py-2.5 text-xs sm:text-sm font-semibold rounded-lg flex items-center justify-center">
+                                View Details
+                            </a>
+                            <a href="https://wa.me/237676873893?text=Hello%20Bush%20City%20Holdings%2C%20I%20am%20interested%20in%20inspecting%20Buea%20Residential%20Land." target="_blank" rel="noopener noreferrer" class="btn-secondary w-full py-2 text-xs sm:text-sm font-semibold rounded-lg flex items-center justify-center">
+                                Book Inspection
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Property 4: Strategic Investment Plots -->
+                    <div class="property-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border-l-4 border-bush-green flex flex-col justify-between">
+                        <div>
+                            <div class="property-image relative h-52 bg-gray-100 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=600&auto=format&fit=crop&q=80" alt="Strategic Investment Plots" loading="lazy" class="w-full h-full object-cover">
+                                <span class="sample-badge absolute top-3 right-3 text-white text-2xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm">
+                                    Sample Listing
+                                </span>
+                                <div class="absolute bottom-2.5 left-2.5 bg-black/60 backdrop-blur-xs text-white text-2xs px-2.5 py-0.5 rounded font-medium">
+                                    Expansion Area
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-center justify-between text-xs text-gray-500 mb-2">
+                                    <span class="flex items-center text-bush-dark font-medium">
+                                        <svg class="w-3.5 h-3.5 mr-1 text-bush-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+                                        Greater Buea Area
+                                    </span>
+                                    <span class="font-bold text-gray-700 bg-gray-100 px-2 py-0.5 rounded">750+ sqm</span>
+                                </div>
+                                <h3 class="font-heading font-bold text-lg text-bush-dark mb-2">Investment Plots</h3>
+                                <p class="text-gray-600 text-xs sm:text-sm line-clamp-3 mb-4 leading-relaxed">
+                                    Carefully selected plots in emerging zones around Buea, strategically positioned for long-term appreciation and commercial flexibility.
+                                </p>
+                                <div class="pt-3 border-t border-gray-100 flex items-center justify-between text-xs">
+                                    <span class="text-gray-400 font-semibold uppercase text-2xs">Pricing</span>
+                                    <span class="font-bold text-bush-dark text-sm">Request Pricing</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0 space-y-2">
+                            <a href="properties.html" class="btn-primary w-full py-2.5 text-xs sm:text-sm font-semibold rounded-lg flex items-center justify-center">
+                                View Details
+                            </a>
+                            <a href="https://wa.me/237676873893?text=Hello%20Bush%20City%20Holdings%2C%20I%20am%20interested%20in%20Strategic%20Investment%20Plots." target="_blank" rel="noopener noreferrer" class="btn-secondary w-full py-2 text-xs sm:text-sm font-semibold rounded-lg flex items-center justify-center">
+                                Book Inspection
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <a href="properties.html" class="btn-secondary px-8 py-3.5 rounded-xl font-bold text-sm inline-flex items-center">
+                        Explore Full Properties Catalog &rarr;
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== D. WHY CHOOSE US ===================== -->
+        <section id="why-choose-us" class="py-24 bg-off-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-bush-green font-semibold tracking-wider uppercase text-xs sm:text-sm">Our Pillar Values</span>
+                    <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-bush-dark mt-2 mb-4 section-heading">
+                        Why Choose Bush City Holdings
+                    </h2>
+                    <p class="text-gray-600 text-base sm:text-lg">
+                        We ground our reputation in verified processes, clear communication, and dependable local knowledge in the Cameroon real estate market.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="feature-card bg-white rounded-2xl p-8 shadow-xs border-l-4 border-bush-green text-center">
+                        <div class="feature-icon-circle">
+                            <svg class="w-8 h-8 text-bush-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-bush-dark mb-3">Transparency &amp; Documentation</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            We assist clients in navigating the exact stages of land documentation and verification, fostering total clarity before financial commitment.
+                        </p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="feature-card bg-white rounded-2xl p-8 shadow-xs border-l-4 border-bush-green text-center">
+                        <div class="feature-icon-circle">
+                            <svg class="w-8 h-8 text-bush-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-bush-dark mb-3">Strategic Locations</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Each parcel is selected based on tangible growth indicators: road access, accessibility to electricity, and positive municipal expansion corridors.
+                        </p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="feature-card bg-white rounded-2xl p-8 shadow-xs border-l-4 border-bush-green text-center">
+                        <div class="feature-icon-circle">
+                            <svg class="w-8 h-8 text-bush-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-bush-dark mb-3">Client Guidance</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            From the initial WhatsApp consultation through accompanied boundary walks and layout review, our dedicated staff provides responsive assistance.
+                        </p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="feature-card bg-white rounded-2xl p-8 shadow-xs border-l-4 border-bush-green text-center">
+                        <div class="feature-icon-circle">
+                            <svg class="w-8 h-8 text-bush-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-bush-dark mb-3">Investment Opportunities</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Whether securing a residential homesite or assembling parcels for long-term land banking, we help clients evaluate real value without inflated speculation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== E. ABOUT SECTION ===================== -->
+        <section class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <!-- Left: Editorial Image -->
+                    <div class="lg:col-span-6 relative">
+                        <div class="relative rounded-2xl overflow-hidden shadow-xl">
+                            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&auto=format&fit=crop&q=80" 
+                                 alt="Bush City Holdings Office Discussion" 
+                                 loading="lazy" 
+                                 class="w-full h-[450px] object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-bush-dark/60 via-transparent to-transparent"></div>
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 hidden sm:block bg-bush-dark text-white p-6 rounded-2xl shadow-xl max-w-xs border-l-4 border-gold-accent">
+                            <p class="font-heading font-bold text-lg mb-1">Local Focus</p>
+                            <p class="text-white/80 text-xs">Deep familiarity with Buea and surrounding Southwest Region land topography.</p>
+                        </div>
+                    </div>
+
+                    <!-- Right: Story & Mission -->
+                    <div class="lg:col-span-6 space-y-6">
+                        <span class="text-bush-green font-semibold tracking-wider uppercase text-xs sm:text-sm">About The Company</span>
+                        <h2 class="font-heading text-3xl sm:text-4xl font-bold text-bush-dark leading-tight">
+                            Building Opportunities Through Property Ownership
+                        </h2>
+                        <p class="text-gray-600 leading-relaxed text-sm sm:text-base">
+                            Bush City Holdings is a property and land investment company operating in Buea, Cameroon. We were founded to make the land discovery and acquisition process transparent, professional, and accessible for both local residents and diaspora clients.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed text-sm sm:text-base">
+                            Land ownership represents one of the most stable long-term investments in Central Africa. Our commitment is to ensure clients understand every dimension of their investment: boundary coordinates, layout context, road easements, and practical acquisition milestones.
+                        </p>
+
+                        <!-- Mission & Vision Brief -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                            <div class="p-4 bg-off-white rounded-xl border border-gray-100">
+                                <h4 class="font-bold text-bush-dark text-sm mb-1">Our Mission</h4>
+                                <p class="text-xs text-gray-600">To provide transparent, dependable property acquisition pathways in Buea.</p>
+                            </div>
+                            <div class="p-4 bg-off-white rounded-xl border border-gray-100">
+                                <h4 class="font-bold text-bush-dark text-sm mb-1">Our Vision</h4>
+                                <p class="text-xs text-gray-600">To be the trusted real estate choice for sustainable land development.</p>
+                            </div>
+                        </div>
+
+                        <p class="text-xs text-gray-400 italic">
+                            [Company profile data and official certifications will be updated as verified by Bush City Holdings]
+                        </p>
+
+                        <div class="pt-2">
+                            <a href="About.html" class="btn-primary px-8 py-3.5 rounded-xl font-bold text-sm inline-flex items-center">
+                                Learn More About Us &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== F. LOCATION HIGHLIGHTS ===================== -->
+        <section class="py-24 bg-off-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-bush-green font-semibold tracking-wider uppercase text-xs sm:text-sm">Strategic Zones</span>
+                    <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-bush-dark mt-2 mb-4 section-heading">
+                        Prime Locations in Buea, Cameroon
+                    </h2>
+                    <p class="text-gray-600 text-base sm:text-lg">
+                        Understanding location is fundamental to real estate value. Here are the core development sectors where Bush City Holdings offers land parcels.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Location 1 -->
+                    <div class="location-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border-l-4 border-bush-green">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&auto=format&fit=crop&q=80" alt="Bokova Landscape" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-heading font-bold text-xl text-bush-dark mb-2">Bokova Area</h3>
+                            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                                A rapidly developing suburban sector characterized by clean air, scenic mountain views, and emerging private home builds. Excellent road connectivity.
+                            </p>
+                            <a href="properties.html" class="text-bush-green hover:text-bush-dark font-bold text-sm inline-flex items-center">
+                                View Bokova Plots &rarr;
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Location 2 -->
+                    <div class="location-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border-l-4 border-bush-green">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1628624747186-a941c476b7ef?w=600&auto=format&fit=crop&q=80" alt="Mile 16 Area" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-heading font-bold text-xl text-bush-dark mb-2">Mile 16 Corridor</h3>
+                            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                                The transport gateway to Buea, offering swift connectivity to the commercial capital (Douala) and high demand for residential rental properties.
+                            </p>
+                            <a href="properties.html" class="text-bush-green hover:text-bush-dark font-bold text-sm inline-flex items-center">
+                                View Mile 16 Plots &rarr;
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Location 3 -->
+                    <div class="location-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border-l-4 border-bush-green">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=600&auto=format&fit=crop&q=80" alt="Buea Town Core" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-heading font-bold text-xl text-bush-dark mb-2">Buea Town</h3>
+                            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                                The established civic and institutional heart of the city. High security, established electricity, municipal water, and historical prestige.
+                            </p>
+                            <a href="properties.html" class="text-bush-green hover:text-bush-dark font-bold text-sm inline-flex items-center">
+                                View Buea Town Plots &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== G. SITE VISIT BOOKING / LEAD GENERATION ===================== -->
+        <section class="py-24 bg-white" id="site-visit">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-bush-green font-semibold tracking-wider uppercase text-xs sm:text-sm">Personal Verification</span>
+                    <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-bush-dark mt-2 mb-4 section-heading">
+                        Your Next Property Could Be One Visit Away
+                    </h2>
+                    <p class="text-gray-600 text-base sm:text-lg">
+                        Submit your details below to schedule an accompanied on-site inspection. Submitting launches a formatted WhatsApp chat directly with our Buea office (+237 676 873 893).
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                    <!-- Form Column -->
+                    <div class="lg:col-span-7 bg-off-white p-8 sm:p-10 rounded-2xl shadow-sm border border-gray-100">
+                        <form id="booking-form" novalidate class="space-y-6">
+                            <!-- Full Name -->
+                            <div>
+                                <label for="fullName" class="form-label">Full Name <span class="text-red-500">*</span></label>
+                                <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" class="form-input" required>
+                                <p id="fullName-error" class="form-error-message"></p>
+                            </div>
+
+                            <!-- Phone Number -->
+                            <div>
+                                <label for="phoneNumber" class="form-label">Phone / WhatsApp Number <span class="text-red-500">*</span></label>
+                                <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="e.g. +237 676 873 893" class="form-input" required>
+                                <p id="phoneNumber-error" class="form-error-message"></p>
+                            </div>
+
+                            <!-- Preferred Property / Location -->
+                            <div>
+                                <label for="preferredProperty" class="form-label">Preferred Property / Location <span class="text-red-500">*</span></label>
+                                <select id="preferredProperty" name="preferredProperty" class="form-input bg-white cursor-pointer" required>
+                                    <option value="" disabled selected>-- Select a property or area --</option>
+                                    <option value="Bokova Extension">Bokova Extension</option>
+                                    <option value="Mile 16 Layout">Mile 16 Layout</option>
+                                    <option value="Buea Town Residential">Buea Town Residential</option>
+                                    <option value="Strategic Investment Plots">Strategic Investment Plots</option>
+                                    <option value="General Property Consultation">General Property Consultation / Other</option>
+                                </select>
+                                <p id="preferredProperty-error" class="form-error-message"></p>
+                            </div>
+
+                            <!-- Preferred Inspection Date -->
+                            <div>
+                                <label for="inspectionDate" class="form-label">Preferred Inspection Date <span class="text-red-500">*</span></label>
+                                <input type="date" id="inspectionDate" name="inspectionDate" class="form-input" required>
+                                <p id="inspectionDate-error" class="form-error-message"></p>
+                            </div>
+
+                            <!-- Additional Message -->
+                            <div>
+                                <label for="additionalMessage" class="form-label">Additional Message <span class="text-gray-400 font-normal">(Optional)</span></label>
+                                <textarea id="additionalMessage" name="additionalMessage" rows="3" placeholder="Tell us if you have specific timing needs or plot requirements..." class="form-input"></textarea>
+                                <p id="additionalMessage-error" class="form-error-message"></p>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="pt-2">
+                                <button type="submit" class="btn-primary w-full py-4 text-base font-bold shadow-md hover:shadow-lg flex items-center justify-center rounded-xl transition duration-200">
+                                    <svg class="w-5 h-5 mr-2 text-bush-light" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z"/>
+                                    </svg>
+                                    Schedule Site Visit via WhatsApp
+                                </button>
+                                <p class="text-2xs text-center text-gray-500 mt-2">
+                                    Submitting launches WhatsApp with your pre-filled inquiry. No automated spam or misleading confirmations.
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Side Information Panel -->
+                    <div class="lg:col-span-5 space-y-6">
+                        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <h3 class="font-heading font-bold text-2xl text-bush-dark mb-4">Inspection Highlights</h3>
+                            <ul class="space-y-4 text-sm text-gray-700">
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-bush-green mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    <span><strong>Ground Boundary Verification:</strong> Physical review of survey beacons and dimensions.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-bush-green mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    <span><strong>Access Assessment:</strong> Verification of motorable access roads and terrain incline.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-bush-green mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    <span><strong>Documentation Briefing:</strong> Clear breakdown of property ownership documents and acquisition steps.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- WhatsApp Direct Card -->
+                        <div class="bg-bush-dark text-white p-8 rounded-2xl">
+                            <h4 class="font-heading font-bold text-xl mb-2">Prefer to Message Right Now?</h4>
+                            <p class="text-white/80 text-sm mb-6 leading-relaxed">
+                                Our client team is available on WhatsApp to answer quick questions regarding plot availability and current layouts.
+                            </p>
+                            <a href="https://wa.me/237676873893?text=Hello%20Bush%20City%20Holdings%2C%20I%20would%20like%20to%20inquire%20about%20land%20in%20Buea." 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="btn-whatsapp w-full py-3 px-4 rounded-xl font-bold text-sm text-center flex items-center justify-center shadow">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z"/></svg>
+                                Chat on WhatsApp (+237 676 873 893)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== H. TESTIMONIALS / CLIENT EXPERIENCES ===================== -->
+        <section class="py-24 bg-off-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-bush-green font-semibold tracking-wider uppercase text-xs sm:text-sm">Client Experience</span>
+                    <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-bush-dark mt-2 mb-4 section-heading">
+                        Client Testimonials
+                    </h2>
+                    <p class="text-gray-600 text-base">
+                        Sample demonstration feedback illustrating client communication and on-ground inspection support in Cameroon.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card bg-white p-8 rounded-2xl shadow-xs border-l-4 border-bush-green flex flex-col justify-between">
+                        <div class="relative z-10 mb-6">
+                            <div class="flex text-gold-accent mb-4">
+                                ★★★★★
+                            </div>
+                            <p class="text-gray-600 text-sm italic leading-relaxed">
+                                "As a diaspora buyer, having clear site walk videos and transparent documentation guidance made all the difference. The team was responsive and punctual."
+                            </p>
+                        </div>
+                        <div class="border-t border-gray-100 pt-4">
+                            <p class="font-bold text-bush-dark text-sm">Demonstration Buyer A</p>
+                            <p class="text-2xs text-gray-400">Sample Feedback &bull; UK-Based Investor</p>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card bg-white p-8 rounded-2xl shadow-xs border-l-4 border-bush-green flex flex-col justify-between">
+                        <div class="relative z-10 mb-6">
+                            <div class="flex text-gold-accent mb-4">
+                                ★★★★★
+                            </div>
+                            <p class="text-gray-600 text-sm italic leading-relaxed">
+                                "The site visit in Bokova was straightforward. We walked the four beacon corners and received full context on municipal zoning and nearby utilities."
+                            </p>
+                        </div>
+                        <div class="border-t border-gray-100 pt-4">
+                            <p class="font-bold text-bush-dark text-sm">Demonstration Buyer B</p>
+                            <p class="text-2xs text-gray-400">Sample Feedback &bull; Local Resident</p>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card bg-white p-8 rounded-2xl shadow-xs border-l-4 border-bush-green flex flex-col justify-between">
+                        <div class="relative z-10 mb-6">
+                            <div class="flex text-gold-accent mb-4">
+                                ★★★★★
+                            </div>
+                            <p class="text-gray-600 text-sm italic leading-relaxed">
+                                "Professional demeanor, no pushy tactics. Appreciated the realistic advice regarding terrain preparation and road access."
+                            </p>
+                        </div>
+                        <div class="border-t border-gray-100 pt-4">
+                            <p class="font-bold text-bush-dark text-sm">Demonstration Buyer C</p>
+                            <p class="text-2xs text-gray-400">Sample Feedback &bull; Property Developer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-center text-xs text-gray-400 mt-8 italic">
+                    [Note: Verified customer testimonials and names will be inserted upon official company certification]
+                </p>
+            </div>
+        </section>
+
+        <!-- ===================== I. FREQUENTLY ASKED QUESTIONS ===================== -->
+        <section class="py-24 bg-white">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <span class="text-bush-green font-semibold tracking-wider uppercase text-xs sm:text-sm">Informed Choices</span>
+                    <h2 class="font-heading text-3xl sm:text-4xl font-bold text-bush-dark mt-2 mb-4 section-heading">
+                        Frequently Asked Questions
+                    </h2>
+                    <p class="text-gray-600 text-sm sm:text-base">
+                        Get clear answers to common inquiries regarding land acquisition with Bush City Holdings in Buea.
+                    </p>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- FAQ 1 -->
+                    <div class="border border-gray-200 rounded-xl overflow-hidden">
+                        <button @click="activeFaq = (activeFaq === 1 ? null : 1)" class="faq-button w-full px-6 py-5 text-left font-semibold text-bush-dark flex justify-between items-center bg-white hover:bg-gray-50 focus:outline-none">
+                            <span class="text-base sm:text-lg">How can I acquire land through Bush City Holdings?</span>
+                            <svg class="faq-chevron w-5 h-5 text-bush-green flex-shrink-0" :class="{ 'rotated': activeFaq === 1 }" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div x-show="activeFaq === 1" x-cloak class="px-6 pb-6 text-gray-600 text-sm leading-relaxed border-t border-gray-100 bg-off-white/50">
+                            The acquisition process starts with identifying suitable plots from our available catalog, scheduling a guided physical site inspection, reviewing property coordinates and documentation, and proceeding through formal legal acquisition procedures.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="border border-gray-200 rounded-xl overflow-hidden">
+                        <button @click="activeFaq = (activeFaq === 2 ? null : 2)" class="faq-button w-full px-6 py-5 text-left font-semibold text-bush-dark flex justify-between items-center bg-white hover:bg-gray-50 focus:outline-none">
+                            <span class="text-base sm:text-lg">Can I inspect a property before making any commitment?</span>
+                            <svg class="faq-chevron w-5 h-5 text-bush-green flex-shrink-0" :class="{ 'rotated': activeFaq === 2 }" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div x-show="activeFaq === 2" x-cloak class="px-6 pb-6 text-gray-600 text-sm leading-relaxed border-t border-gray-100 bg-off-white/50">
+                            Yes, absolutely. We strongly encourage every buyer or their designated local representative to walk the land in person. Our site inspections include beacon verification, road access checks, and terrain assessment.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="border border-gray-200 rounded-xl overflow-hidden">
+                        <button @click="activeFaq = (activeFaq === 3 ? null : 3)" class="faq-button w-full px-6 py-5 text-left font-semibold text-bush-dark flex justify-between items-center bg-white hover:bg-gray-50 focus:outline-none">
+                            <span class="text-base sm:text-lg">What documents should I expect during land acquisition?</span>
+                            <svg class="faq-chevron w-5 h-5 text-bush-green flex-shrink-0" :class="{ 'rotated': activeFaq === 3 }" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div x-show="activeFaq === 3" x-cloak class="px-6 pb-6 text-gray-600 text-sm leading-relaxed border-t border-gray-100 bg-off-white/50">
+                            In Cameroon, land transactions typically involve certified cadastral survey plans, boundary verification reports, and formal agreements handled through qualified legal channels. We help buyers understand the exact paperwork associated with each property.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="border border-gray-200 rounded-xl overflow-hidden">
+                        <button @click="activeFaq = (activeFaq === 4 ? null : 4)" class="faq-button w-full px-6 py-5 text-left font-semibold text-bush-dark flex justify-between items-center bg-white hover:bg-gray-50 focus:outline-none">
+                            <span class="text-base sm:text-lg">How do I obtain current property pricing?</span>
+                            <svg class="faq-chevron w-5 h-5 text-bush-green flex-shrink-0" :class="{ 'rotated': activeFaq === 4 }" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div x-show="activeFaq === 4" x-cloak class="px-6 pb-6 text-gray-600 text-sm leading-relaxed border-t border-gray-100 bg-off-white/50">
+                            Because land prices vary by exact plot sizing and road frontage, pricing is provided upon direct inquiry via WhatsApp (+237 676 873 893) or via our booking request form.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 5 -->
+                    <div class="border border-gray-200 rounded-xl overflow-hidden">
+                        <button @click="activeFaq = (activeFaq === 5 ? null : 5)" class="faq-button w-full px-6 py-5 text-left font-semibold text-bush-dark flex justify-between items-center bg-white hover:bg-gray-50 focus:outline-none">
+                            <span class="text-base sm:text-lg">How can I contact Bush City Holdings?</span>
+                            <svg class="faq-chevron w-5 h-5 text-bush-green flex-shrink-0" :class="{ 'rotated': activeFaq === 5 }" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div x-show="activeFaq === 5" x-cloak class="px-6 pb-6 text-gray-600 text-sm leading-relaxed border-t border-gray-100 bg-off-white/50">
+                            You can reach us directly via WhatsApp at +237 676 873 893, visit our contact page to submit a site visit booking, or arrange a personal meeting in Buea, Southwest Region, Cameroon.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== J. FINAL CTA SECTION ===================== -->
+        <section class="bg-bush-dark text-white py-20 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+                    Ready to Take the First Step Towards Land Ownership?
+                </h2>
+                <p class="text-white/85 max-w-2xl mx-auto mb-8 text-base sm:text-lg font-light leading-relaxed">
+                    Explore available properties or speak with our team to discover your next opportunity in Buea, Cameroon.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="properties.html" class="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-white text-bush-dark font-bold hover:bg-gray-100 transition shadow-lg text-base">
+                        Explore Properties
+                    </a>
+                    <a href="https://wa.me/237676873893?text=Hello%20Bush%20City%20Holdings%2C%20I%20would%20like%20to%20speak%20with%20your%20team." 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="btn-whatsapp px-8 py-4 rounded-xl font-bold flex items-center justify-center text-base shadow-lg">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z"/></svg>
+                        Chat on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===================== K. FOOTER ===================== -->
+    <footer class="bg-bush-dark text-white pt-16 pb-8 border-t border-bush-green/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <!-- Column 1: Brand -->
+                <div class="space-y-4">
+                    <a href="index.html" class="brand-lockup brand-lockup-footer" aria-label="Bush City Holdings home">
+                        <span class="brand-mark"><img src="images/logo.jpg" alt=""></span>
+                        <span class="brand-copy">
+                            <span class="brand-name">Bush City Holdings</span>
+                            <span class="brand-tagline">Guided by integrity, driven by results</span>
+                        </span>
+                    </a>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        A real estate and property investment company based in Buea, Cameroon. Dedicated to securing your future through transparent land acquisitions.
+                    </p>
+                    <div class="flex items-center space-x-3 pt-2">
+                        <a href="#" class="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center hover:bg-bush-green transition" aria-label="Facebook">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="#" class="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center hover:bg-bush-green transition" aria-label="Instagram">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </a>
+                        <a href="https://wa.me/237676873893" class="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center hover:bg-bush-green transition" aria-label="WhatsApp">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-4 text-white">Quick Links</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="index.html" class="text-bush-light font-medium transition">Home</a></li>
+                        <li><a href="About.html" class="text-gray-300 hover:text-white transition">About Us</a></li>
+                        <li><a href="properties.html" class="text-gray-300 hover:text-white transition">Properties</a></li>
+                        <li><a href="#why-choose-us" class="text-gray-300 hover:text-white transition">Why Choose Us</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white transition">Contact & Booking</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Properties -->
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-4 text-white">Properties</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="properties.html" class="text-gray-300 hover:text-white transition">Bokova Extension</a></li>
+                        <li><a href="properties.html" class="text-gray-300 hover:text-white transition">Mile 16 Layout</a></li>
+                        <li><a href="properties.html" class="text-gray-300 hover:text-white transition">Buea Town Residential</a></li>
+                        <li><a href="properties.html" class="text-gray-300 hover:text-white transition">Strategic Investment Plots</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact -->
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-4 text-white">Contact Info</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start space-x-3">
+                            <svg class="w-5 h-5 text-bush-light mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            <span class="text-gray-300">Buea, Southwest Region, Cameroon</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <svg class="w-5 h-5 text-bush-light mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z"/></svg>
+                            <a href="https://wa.me/237676873893" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition">+237 676 873 893</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
+                <p>&copy; <span id="year-span"></span> Bush City Holdings. All rights reserved.</p>
+                <p class="text-gray-400">Buea, Cameroon &bull; Land &amp; Property Investment</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Action Button -->
+    <a href="https://wa.me/237676873893?text=Hello%20Bush%20City%20Holdings%2C%20I%20would%20like%20to%20inquire%20about%20your%20available%20properties." 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="whatsapp-float shadow-xl"
+       aria-label="Chat with Bush City Holdings on WhatsApp">
+        <svg fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z"/>
+            <path d="M12 2C6.477 2 2 6.477 2 12c0 1.891.528 3.659 1.445 5.174L2 22l4.981-1.399C8.423 21.493 10.154 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.062c-1.636 0-3.15-.49-4.42-1.332l-.317-.21-2.955.83.844-2.883-.23-.332A8.026 8.026 0 014 12.062c0-4.432 3.587-8.038 8-8.038 4.414 0 8 3.606 8 8.038s-3.586 8.038-8 8.038z"/>
+        </svg>
+    </a>
+
+    <!-- Year Dynamic Update -->
+    <script>
+        document.getElementById('year-span').textContent = new Date().getFullYear();
+    </script>
+
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Custom Main JS -->
+    <script defer src="main.js"></script>
+</body>
+</html>
